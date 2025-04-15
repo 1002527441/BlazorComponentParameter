@@ -1,0 +1,29 @@
+﻿@page "/test"
+
+<p> this is parent component</p>
+
+<Child1Component></Child1Component>
+<Child2Component></Child2Component>
+
+
+@code {
+    protected override void OnInitialized()
+    {
+        Console.WriteLine("parent 1: OnInitialized");
+        base.OnInitialized();
+    }
+
+    override 
+
+    protected override void OnParametersSet()
+    {
+        Console.WriteLine("parent 1: OnParametersSet");
+        base.OnParametersSet();
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        Console.WriteLine("parent 1: OnAfterRender");
+        base.OnAfterRender(firstRender);
+    }
+}

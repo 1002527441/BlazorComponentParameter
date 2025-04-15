@@ -1,0 +1,22 @@
+﻿<!-- 子组件 2 ChildComponent2.razor -->
+<h3>Grandson Component</h3>
+
+@code {
+    protected override void OnInitialized()
+    {
+        Console.WriteLine("grandson 1: OnInitialized");
+        base.OnInitialized();
+    }
+
+    protected override void OnParametersSet()
+    {
+        Console.WriteLine("grandson 1: OnParametersSet");
+        base.OnParametersSet();
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        Console.WriteLine("grandson 1: OnAfterRender");
+        base.OnAfterRender(firstRender);
+    }
+}

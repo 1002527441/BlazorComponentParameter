@@ -74,6 +74,13 @@ public partial class Counter
 
     }
 
+    public override Task SetParametersAsync(ParameterView parameters)
+    {
+        parameters.SetParameterProperties(this);
+        Console.WriteLine($"Child---SetParametersAsync={InitialCount}");
+        return base.SetParametersAsync(parameters);
+    }
+
 
     protected override async Task OnParametersSetAsync()
     {
