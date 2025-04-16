@@ -81,7 +81,6 @@ public partial class Counter
         return base.SetParametersAsync(parameters);
     }
 
-
     protected override async Task OnParametersSetAsync()
     {
         Console.WriteLine($"Child---OnParametersSetAsync={InitialCount}");

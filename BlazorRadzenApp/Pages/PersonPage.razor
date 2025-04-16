@@ -1,0 +1,24 @@
+﻿@page "/person"
+
+
+<RadzenCard >
+    <RadzenCardHeader>
+        <h3>Person Details</h3>
+    </RadzenCardHeader>
+
+    @foreach (var person in Persons)
+    {
+         <RadzenCardBody>
+        <div class="person-details">
+            <h4>@person.Name</h4>
+            <p>Age: @person.Age</p>          
+        </div>
+    </RadzenCardBody>
+    <RadzenCardFooter>
+        <RadzenButton Text="Edit" Click="@(() => EditPerson(person))" />
+        <RadzenButton Text="Delete" Click="@(() => DeletePerson(person))" />
+            <RadzenButton Text="Validator" Click="@(() => ValidatorPerson(person))" />
+    </RadzenCardFooter>
+    }
+   
+</RadzenCard>
